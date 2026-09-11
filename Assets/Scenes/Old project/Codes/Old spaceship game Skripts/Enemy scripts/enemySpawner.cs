@@ -14,7 +14,7 @@ public class enemySpawner : MonoBehaviour
     public GameObject sp3;
     public GameObject sp4;
     public GameObject sp5;
-    public List<GameObject> spawners = new List<GameObject>();
+    public List<GameObject> spawners = new List<GameObject>(); // a list for all spawners
     public GameObject temp;
     private void Start()
     {
@@ -45,12 +45,13 @@ public class enemySpawner : MonoBehaviour
     // Spawn enemys at random spawners
     public  void ToSpawn() 
     {
-        currenttime = Time.time + interval;
-        int index = Random.Range(0, 5);
+        currenttime = Time.time + interval; // spawn enemys after interval time
+        // choose a random spawner from the 5
+        int index = Random.Range(0, 5); 
          temp = spawners[index]; 
         
         
-        Instantiate(enemyObject, temp.transform.position,temp.transform.rotation);
+        Instantiate(enemyObject, temp.transform.position,temp.transform.rotation); // spawn
     
     }
 }
