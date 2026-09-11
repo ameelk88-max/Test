@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemySpawner : MonoBehaviour
 {
-   
+   // make 2 Variables to control the time until new enemy spawn
     public float currenttime;
     public float interval;
     public GameObject enemyObject;
