@@ -6,6 +6,7 @@ TagManager:
   tags:
   - shoot
   - Finishline
+  - enemy
   layers:
   - Default
   - TransparentFX
