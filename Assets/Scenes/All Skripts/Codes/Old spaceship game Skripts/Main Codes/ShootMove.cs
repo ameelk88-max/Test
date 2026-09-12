@@ -5,6 +5,8 @@ public class ShootMove : MonoBehaviour
     //Eigenschaften der Schüsse 
     public float bulletSpeed = 5f;
     public int bulletDamage = 35;
+    
+    
     private void Start()
     {
         
