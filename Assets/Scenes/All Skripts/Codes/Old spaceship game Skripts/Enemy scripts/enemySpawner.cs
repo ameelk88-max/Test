@@ -7,7 +7,14 @@ public class enemySpawner : MonoBehaviour
    // make 2 Variables to control the time until new enemy spawn
     public float currenttime;
     public float interval;
-    public GameObject enemyObject;
+    
+    // References for all enemys
+    public GameObject enemyObject; //30%
+    public GameObject smallEnemy;  // 20% 
+    public GameObject largeEnemy;  // 20%
+    public GameObject trickyenemy; // 25% 
+    public GameObject bossenemy; //5%
+    
   // mache Referrenzen für die Spawners 
     public GameObject sp1;
     public GameObject sp2;
@@ -16,6 +23,11 @@ public class enemySpawner : MonoBehaviour
     public GameObject sp5;
     public List<GameObject> spawners = new List<GameObject>(); // a list for all spawners
     public GameObject temp;
+   
+    
+    
+    
+    
     private void Start()
     {
         // Alle Spawners in Liste packen
@@ -24,6 +36,7 @@ public class enemySpawner : MonoBehaviour
         spawners.Add(sp3);
         spawners.Add(sp4);
         spawners.Add(sp5);
+
         
     }
 
@@ -51,8 +64,36 @@ public class enemySpawner : MonoBehaviour
         int index = Random.Range(0, 5); 
          temp = spawners[index]; 
         
-        
-        Instantiate(enemyObject, temp.transform.position,temp.transform.rotation); // spawn
-    
+       
+
+        // get random number to spawn enemys based on random numbers
+        int rnd = Random.Range(1, 101);
+
+        switch (rnd)
+        {
+            // 5% chance to spawn the boss
+            case > 0 and <= 5:
+                Instantiate(bossenemy, temp.transform.position, temp.transform.rotation);
+                break;
+            // 30% chance to spawn the boss
+            case > 5 and <= 35:
+                Instantiate(enemyObject, temp.transform.position, temp.transform.rotation);
+                break;
+            // 20% chance to spawn the boss
+            case > 35 and <= 55:
+                Instantiate(smallEnemy, temp.transform.position, temp.transform.rotation);
+                break;
+            // 20% chance to spawn the boss
+            case > 55 and <= 75:
+                Instantiate(largeEnemy, temp.transform.position, temp.transform.rotation);
+                break;
+            // 25% chance to spawn the boss
+            case > 75 and <= 100:
+                Instantiate(largeEnemy, temp.transform.position, temp.transform.rotation);
+                break;
+
+
+        }
+
     }
 }
