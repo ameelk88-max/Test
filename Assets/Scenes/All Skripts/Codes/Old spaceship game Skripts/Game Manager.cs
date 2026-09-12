@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {  //Important variables
     public int score = 0;  // count number of enemies you kill
+    public int upgradesDetecter = 0;  // detect when to use the Methode Upgrades 
     public int Lifes = 5; // count your life
     public int numberOfEnemy = 0; // how many enemies currently exist
 

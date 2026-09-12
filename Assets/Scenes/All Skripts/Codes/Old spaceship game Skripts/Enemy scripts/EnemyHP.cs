@@ -38,12 +38,13 @@ public class EnemyHP : MonoBehaviour
     }
 
     private void Update()
-    {// destroy enemy if it's HP reaches 0
-       
+    {// destroy enemy if it's HP reaches 0, increase score by 1 and upgradesDetecter by 1
+
         if (currentHealth <= 0) 
-        {
-            gm.score++;
-            Destroy (this.gameObject);
+        {  
+            Destroy (this.gameObject);  // destroy enemy
+            gm.score++;                 // increase score by 1
+            gm.upgradesDetecter++;      // increase upgradedetector by 1
         }
     }
 

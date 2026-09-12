@@ -26,6 +26,29 @@ public class UpgradesManager : MonoBehaviour
     }
     // make three upgrade appear
 
+   
+
+
+
+
+
+
+    private void Update()
+    {
+
+
+
+
+
+        if(GMR.upgradesDetecter ==4 || GMR.upgradesDetecter %8 ==0) 
+        {
+            Upgrades();
+            GMR.upgradesDetecter += 1;
+        }
+    }
+
+
+
 
 
 
@@ -55,8 +78,15 @@ public class UpgradesManager : MonoBehaviour
         allButtons[index3].transform.position = bttonSpawner3.position;
     }
 
-
-
+    // Set all Buttons to inactive. Helps after a player pick an upgrade
+    public void DeactivateALLButtons()
+    {
+     foreach(Button button in allButtons) 
+        {
+         button.gameObject.SetActive(false);
+        }
+    
+    }
 
 
 
