@@ -33,6 +33,10 @@ public class enemySpawner : MonoBehaviour
         if (Time.time >= currenttime)
         {
             ToSpawn();
+            ToSpawn();
+            ToSpawn();
+            ToSpawn();
+            ToSpawn();
             // 20% chance to spawn one more enemy
             int tempo = Random.Range(1, 11);
             if(tempo == 1 ||tempo == 2) 
