@@ -1,6 +1,9 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {  //Important variables
@@ -16,8 +19,13 @@ public class GameManager : MonoBehaviour
     public GameObject spawner4;
     public GameObject spawner5;
 
+
+    public TextMeshProUGUI currentScore; // use this to write the current score
+    public TextMeshProUGUI currentLifes; // use this to write the current Lifes
     private void Update()
     {
+        currentScore.text = score.ToString();
+        currentLifes.text = Lifes.ToString();
         // Active choose upgrade methode when you kill 10 enemy
         if (score == 10) 
         {

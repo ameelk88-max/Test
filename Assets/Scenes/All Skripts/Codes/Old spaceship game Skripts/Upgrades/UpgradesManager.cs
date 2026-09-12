@@ -40,7 +40,7 @@ public class UpgradesManager : MonoBehaviour
 
 
 
-        if(GMR.upgradesDetecter ==4 || GMR.upgradesDetecter %8 ==0) 
+        if(GMR.upgradesDetecter ==4 || GMR.upgradesDetecter %6 ==0 && GMR.upgradesDetecter !=0) 
         {
             Upgrades();
             GMR.upgradesDetecter += 1;
@@ -76,6 +76,7 @@ public class UpgradesManager : MonoBehaviour
         allButtons[index1].transform.position = bttonSpawner1.position;
         allButtons[index2].transform.position = bttonSpawner2.position;
         allButtons[index3].transform.position = bttonSpawner3.position;
+        Time.timeScale = 0f;
     }
 
     // Set all Buttons to inactive. Helps after a player pick an upgrade
@@ -84,6 +85,7 @@ public class UpgradesManager : MonoBehaviour
      foreach(Button button in allButtons) 
         {
          button.gameObject.SetActive(false);
+            Time.timeScale = 1f;     // reset time to continue the game
         }
     
     }
