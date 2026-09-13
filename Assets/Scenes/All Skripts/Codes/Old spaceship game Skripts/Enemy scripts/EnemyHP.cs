@@ -59,7 +59,7 @@ public class EnemyHP : MonoBehaviour
 
             if(gm.score %7 == 0) 
             {
-                spRefr.interval -= 0.1f;
+                spRefr.interval -= 0.15f;
             }
         }
     }

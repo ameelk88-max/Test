@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     //reference of Gameover button to use it when game ends. and another reference to the position where it should appear
     public Button GameOverRefr;
     public Transform here;
+
+
+  
     private void Update()
     {
         currentScore.text = score.ToString();
