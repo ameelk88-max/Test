@@ -10,6 +10,8 @@ public class UpgradesManager : MonoBehaviour
     public Button button2;
     public Button button3;
     public Button button4;
+    public Button button5;
+    public Button button6;
     private List<Button> allButtons; // make alist for the buttons which are upgrades!
     //References for all buttons Locations (Spawners from type transform) 
     public Transform bttonSpawner1;
@@ -22,7 +24,7 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private enemySpawner enemyspawnerRefer;
     private void Awake()
     {
-        allButtons = new() { button1, button2, button3, button4 }; //define the elements of this List you can add mroe buttons here in future
+        allButtons = new() { button1, button2, button3, button4, button5, button6 }; //define the elements of this List you can add mroe buttons here in future
         allSp = new() { bttonSpawner1, bttonSpawner2, bttonSpawner3 };// the three buttonspawners locations are here
     }
     // make three upgrade appear
