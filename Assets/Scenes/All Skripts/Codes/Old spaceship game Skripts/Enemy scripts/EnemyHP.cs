@@ -11,6 +11,8 @@ public class EnemyHP : MonoBehaviour
     public ShootMove refr;
     // GameManagerref 
     public GameManager gm;
+    // reference of enemySpawner
+    [SerializeField] private enemySpawner spRefr;
     private void Start()
     {
         currentHealth = maxHP;
@@ -53,6 +55,11 @@ public class EnemyHP : MonoBehaviour
             Destroy (this.gameObject);  // destroy enemy
             gm.score++;                 // increase score by 1
             gm.upgradesDetecter++;      // increase upgradedetector by 1
+
+            if(gm.score %7 == 0) 
+            {
+                spRefr.interval -= 0.1f;
+            }
         }
     }
 

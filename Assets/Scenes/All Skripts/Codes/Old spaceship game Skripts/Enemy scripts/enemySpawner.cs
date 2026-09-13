@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using NUnit.Framework.Internal;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class enemySpawner : MonoBehaviour
@@ -53,6 +54,11 @@ public class enemySpawner : MonoBehaviour
             if (tempo == 1 || tempo == 2)
             {
                 ToSpawn();
+            }
+            // 0,5% chance to spawn 4 more enemys at once
+            if (Random.value < 0.005f) 
+            {
+                ToSpawn(); ToSpawn(); ToSpawn(); ToSpawn();
             }
         }
     }

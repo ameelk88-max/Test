@@ -20,8 +20,7 @@ public class EnemyMovement : MonoBehaviour
         //after sometime enemy will become faster
         if (Time.time >= timeUntilSpeedup) 
         {
-            timeUntilSpeedup = Time.time + timeUntilSpeedup;
-            enemySpeed = enemySpeed + speedUpValue;
+            timeUntilSpeedup = Time.time + timeUntilSpeedup;  
         }
     }
 

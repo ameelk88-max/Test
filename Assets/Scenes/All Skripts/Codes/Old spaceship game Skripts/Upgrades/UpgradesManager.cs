@@ -18,7 +18,8 @@ public class UpgradesManager : MonoBehaviour
     private List<Transform> allSp; // list for all spawners
     // reference for GameManager
     public GameManager GMR;
-
+    // reference of enemySpawner to active Evolution
+    [SerializeField] private enemySpawner enemyspawnerRefer;
     private void Awake()
     {
         allButtons = new() { button1, button2, button3, button4 }; //define the elements of this List you can add mroe buttons here in future
@@ -40,10 +41,11 @@ public class UpgradesManager : MonoBehaviour
 
 
 
-        if(GMR.upgradesDetecter ==4 || GMR.upgradesDetecter %6 ==0 && GMR.upgradesDetecter !=0) 
+        if(GMR.upgradesDetecter ==3 || GMR.upgradesDetecter %7 ==0 && GMR.upgradesDetecter !=0) 
         {
             Upgrades();
             GMR.upgradesDetecter += 1;
+            enemyspawnerRefer.Evolution();
         }
     }
 
