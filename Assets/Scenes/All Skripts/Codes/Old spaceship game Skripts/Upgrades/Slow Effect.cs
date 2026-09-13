@@ -8,7 +8,7 @@ public class SlowEffect : MonoBehaviour
 
     public void SlowUp() 
     {
-        refr.bulletSlow += 0.4f;
+        refr.bulletSlow += 0.2f;
         upRefr.DeactivateALLButtons();
     }
 

@@ -42,8 +42,9 @@ public class EnemyHP : MonoBehaviour
             // Make sure even if the enemy speed reaches 0 he will keep moving very slowly. Note: if enemy speed is in minus the enemy will move in the opposite direction
             if (this.gameObject.GetComponent<EnemyMovement>().enemySpeed <= 0) 
             {
-                this.gameObject.GetComponent<EnemyMovement>().enemySpeed = 0.1f;
+                this.gameObject.GetComponent<EnemyMovement>().enemySpeed = 0.2f;
             }
+            Destroy(collision.gameObject);   // destroy the bullets after hitting them
         }
     }
 
