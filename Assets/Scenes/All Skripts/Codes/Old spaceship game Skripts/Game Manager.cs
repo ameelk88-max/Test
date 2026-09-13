@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI currentScore; // use this to write the current score
     public TextMeshProUGUI currentLifes; // use this to write the current Lifes
+   
+    
+    //reference of Gameover button to use it when game ends. and another reference to the position where it should appear
+    public Button GameOverRefr;
+    public Transform here;
     private void Update()
     {
         currentScore.text = score.ToString();
@@ -36,7 +41,10 @@ public class GameManager : MonoBehaviour
         // lóse the game when you have no more life points
         if (Lifes <= 0) 
         {
-            Time.timeScale = 0f;
+
+            GameOver();
+
+
         }
 
 
@@ -52,6 +60,7 @@ public class GameManager : MonoBehaviour
     */
     public void GameOver() 
     {   
+        GameOverRefr.transform.position = here.position;
         Time.timeScale = 0f;  
     }
 }
