@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4252eb042d6509b4694b762283032a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bewegung
-  speed: 15
+  speed: 10
   moveright: 100
   moveleft: 97
   currentPosition: {x: 0, y: 0, z: 0}
