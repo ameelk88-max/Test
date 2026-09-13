@@ -5,7 +5,7 @@ public class ShootMove : MonoBehaviour
     //Eigenschaften der Schüsse 
     public float bulletSpeed = 5f;
     public int bulletDamage = 35;
-    
+    public float bulletSlow = 0f; // use this to slow enemys in EnemyHP script
     
     private void Start()
     {
@@ -25,6 +25,6 @@ public class ShootMove : MonoBehaviour
     //destroy it when it enter a domain
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this.gameObject);
+       if(other.CompareTag("Destroybullet")) { Destroy(this.gameObject); }
     }
 }

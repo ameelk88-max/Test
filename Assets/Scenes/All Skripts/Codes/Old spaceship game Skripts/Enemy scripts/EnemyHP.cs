@@ -24,7 +24,7 @@ public class EnemyHP : MonoBehaviour
     
     }
 
-    // when something hits enemy they take damage equal to the bullets damage
+    // when something hits enemy they take damage equal to the bullets damage 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -34,6 +34,14 @@ public class EnemyHP : MonoBehaviour
             Debug.Log(temp);
             TakeDamage(temp);
         
+            // here the enemy will be slowed equal to the bulletSlow
+            this.gameObject.GetComponent<EnemyMovement>().enemySpeed -= collision.gameObject.GetComponent<ShootMove>().bulletSlow;
+           
+            // Make sure even if the enemy speed reaches 0 he will keep moving very slowly. Note: if enemy speed is in minus the enemy will move in the opposite direction
+            if (this.gameObject.GetComponent<EnemyMovement>().enemySpeed <= 0) 
+            {
+                this.gameObject.GetComponent<EnemyMovement>().enemySpeed = 0.1f;
+            }
         }
     }
 
