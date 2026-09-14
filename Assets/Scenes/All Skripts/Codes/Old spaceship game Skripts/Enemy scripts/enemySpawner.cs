@@ -82,20 +82,20 @@ public class enemySpawner : MonoBehaviour
             case > 0 and <= 5:
                 Instantiate(bossenemy, temp.transform.position, temp.transform.rotation);
                 break;
-            // 30% chance to spawn the boss
+            // 30% chance to spawn the normalenemy
             case > 5 and <= 35:
                 Instantiate(enemyObject, temp.transform.position, temp.transform.rotation);
                 break;
-            // 20% chance to spawn the boss
-            case > 35 and <= 55:
+            // 25% chance to spawn the smallenemy
+            case > 35 and <= 60:
                 Instantiate(smallEnemy, temp.transform.position, temp.transform.rotation);
                 break;
-            // 20% chance to spawn the boss
-            case > 55 and <= 75:
+            // 25% chance to spawn the trickyenemy
+            case > 60 and <= 85:
                 Instantiate(trickyenemy, temp.transform.position, temp.transform.rotation);
                 break;
-            // 25% chance to spawn the boss
-            case > 75 and <= 100:
+            // 15% chance to spawn the boss
+            case > 85 and <= 100:
                 Instantiate(largeEnemy, temp.transform.position, temp.transform.rotation);
                 break;
         }

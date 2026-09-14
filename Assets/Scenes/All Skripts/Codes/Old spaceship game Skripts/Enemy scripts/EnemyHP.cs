@@ -44,6 +44,7 @@ public class EnemyHP : MonoBehaviour
             {
                 this.gameObject.GetComponent<EnemyMovement>().enemySpeed = 0.2f;
             }
+
             Destroy(collision.gameObject);   // destroy the bullets after hitting them
         }
     }

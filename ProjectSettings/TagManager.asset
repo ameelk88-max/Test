@@ -8,6 +8,7 @@ TagManager:
   - Finishline
   - enemy
   - Destroybullet
+  - Explosion
   layers:
   - Default
   - TransparentFX
