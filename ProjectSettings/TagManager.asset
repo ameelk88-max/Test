@@ -9,6 +9,9 @@ TagManager:
   - enemy
   - Destroybullet
   - Explosion
+  - LeftEdge
+  - RightEdge
+  - TPLINKS
   layers:
   - Default
   - TransparentFX

@@ -25,7 +25,7 @@ public class ShootMove : MonoBehaviour
     //destroy it when it enter a domain
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-       if (other.CompareTag("Destroybullet")) { Destroy(this.gameObject); }
+
+        if (other.CompareTag("TPLINKS")) { Destroy(this.gameObject); }
     }
 }
