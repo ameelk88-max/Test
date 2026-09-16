@@ -11681,7 +11681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemySpawner
   currenttime: 0
-  interval: 5
+  interval: 8
   enemyObject: {fileID: 925535994}
   smallEnemy: {fileID: 1853167877}
   largeEnemy: {fileID: 305316282}

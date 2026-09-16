@@ -47,6 +47,8 @@ public class enemySpawner : MonoBehaviour
     { // spawn enemys in constant intervalls
         if (Time.time >= currenttime)
         {
+            currenttime = Time.time + interval; // spawn enemys after interval time
+            
             ToSpawn();
 
             // 20% chance to spawn one more enemy
@@ -66,7 +68,7 @@ public class enemySpawner : MonoBehaviour
     // Spawn enemys at random spawners
     public void ToSpawn()
     {
-        currenttime = Time.time + interval; // spawn enemys after interval time
+       
         // choose a random spawner from the 5
         int index = Random.Range(0, 5);
         temp = spawners[index];

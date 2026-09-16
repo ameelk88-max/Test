@@ -47,6 +47,7 @@ public class UpgradesManager : MonoBehaviour
         {
             Upgrades();
             GMR.upgradesDetecter += 1;
+            enemyspawnerRefer.interval -= 0.2f;
             enemyspawnerRefer.Evolution();
         }
     }
