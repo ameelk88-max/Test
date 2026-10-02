@@ -6,6 +6,12 @@ TagManager:
   tags:
   - shoot
   - Finishline
+  - enemy
+  - Destroybullet
+  - Explosion
+  - LeftEdge
+  - RightEdge
+  - TPLINKS
   layers:
   - Default
   - TransparentFX
@@ -42,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 1st
+    uniqueID: 3715323151
     locked: 0
   m_RenderingLayers:
   - Default
